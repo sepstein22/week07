@@ -68,8 +68,9 @@ class Fib:
 
     def _repr_(self):
         if self.n is None:
-            self.n = ''
-        return 'Fib(' + str(self.n) + ')'
+            return 'Fib()'
+        else:
+            return 'Fib(' + str(self.n) + ')'
 
 
 class FibIter:
@@ -112,7 +113,7 @@ def fib_yield(n=None):
             f0 = f1
             if 2 <= i:
                 f1 = f2
-            if i > 2:
+            if i < 2:
                 f2 = 1
             i += 1
             yield f2
