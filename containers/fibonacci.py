@@ -68,7 +68,7 @@ class Fib:
 
     def _repr_(self):
         if self.n is None:
-            return 'Fib()'
+            return 'Fib('')'
         else:
             return 'Fib(' + str(self.n) + ')'
 
