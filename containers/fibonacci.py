@@ -62,15 +62,15 @@ class Fib:
     '''
     def _init_(self, n=None):
         self.n = n
+    
+    def _iter_(self): 
+        return FibIter(self.n)
 
     def _repr_(self):
-        if self.n is not None:
-            return 'Fib(' + str(self.n) + ')'
-        else:
+        if self.n is None:
             return 'Fib()'
-
-    def _iter_(self):
-        return FibIter(self.n)
+        else:
+            return 'Fib(' + str(self.n) + ')'
 
 
 class FibIter:
