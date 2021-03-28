@@ -62,8 +62,8 @@ class Fib:
     '''
     def _init_(self, n=None):
         self.n = n
-    
-    def _iter_(self): 
+
+    def _iter_(self):
         return FibIter(self.n)
 
     def _repr_(self):
